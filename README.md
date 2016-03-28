@@ -1,16 +1,21 @@
 # Context of the exercise
 
-We are a reporting company. One of our partners is integrated with Stripe, which is a payment system. We need to show the following reports:
+We are a reporting company. One of our partners is integrated with Stripe, which is a payment system. 
+You are supposed to provide a json API for a webapp that will need to show the following information in a report:
 
 - How many customers where created during a specified period
-- Top 10 revenue generating cities based on the credit-cards issuing country for the specified period
 - The number of subscriptions per plan id for the specified period
+- Top 10 revenue generating customers for the specified period
 
-For generating this report, we have hooked an endpoint to receive webhooks from Stripe.
-- WebhooksController.handle
+What to do:
 
-You need to implement in memory storage mechanism to catch the appropriate events and complete the method ReportController.getReportData to return the data required above. Keep in mind the in memory storage may need to be replaced with a database solution in the next project phase.      
- 
+- implement an in-memory storage mechanism to keep the appropriate events in the WebhooksController file
+- complete the method ReportController.getReportData to return the data required above. 
 
-Later questions:
-- Does it impact us if Stripe sends us the same event multiple times?
+Notes: Keep in mind the in memory storage may need to be replaced with a database solution in the next project phase.      
+
+Follow-up questions:
+
+- Does it impact us if Stripe sends us the same event multiple times? If so, how to work around this issue?
+- What if we want to change the way we calculate any of the report's metrics. How does that impact the code?
+- What if we want to use multiple servers running this. How does it impact the code?

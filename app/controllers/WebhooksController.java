@@ -1,16 +1,11 @@
 package controllers;
 
-import com.stripe.Stripe;
 import com.stripe.model.Event;
 import com.stripe.net.APIResource;
 import play.mvc.Controller;
 import play.mvc.Result;
 
 public class WebhooksController extends Controller {
-
-    static {
-        Stripe.apiKey = "sk_test_BQokikJOvBiI2HlWgH4olfQ2";
-    }
 
     // stripe webhook handler
     public static Result handle() {

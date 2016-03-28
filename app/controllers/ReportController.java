@@ -11,9 +11,12 @@ public class ReportController extends Controller {
     public static Result getReportData( /* todo startDate, endDate */ ) {
 
         // todo information to be contained in the report
-        // 1- how many customers where created during this period -- look at the customer.created event
-        // 2- Top 10 revenue generating customers for the specified period -- look at the charge.succeeded event
-        // 3- The number of subscriptions per plan id for the specified period -- look at the customer.subscription.created event
+
+        // todo 1- how many customers where created during this period -- look at the events_sample/customer_created.json event
+
+        // todo 2- The number of subscriptions per plan id for the specified period -- look at the events_sample/customer_subscription_created.json event
+
+        // todo 3- Top 10 revenue generating customers for the specified period -- look at the events_sample/charge_succeeded.json event
 
         return ok();
     }
